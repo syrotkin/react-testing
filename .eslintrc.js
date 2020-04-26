@@ -25,6 +25,8 @@ module.exports = {
     "react/jsx-filename-extension": 0,
     "function-paren-newline": 0,
     "react/prefer-stateless-function": 0,
-    "react/jsx-one-expression-per-line": 0
+    "react/jsx-one-expression-per-line": 0,
+    "no-unused-vars": 0,
+    "comma-dangle": 0
   }
 };

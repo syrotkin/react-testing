@@ -15,7 +15,7 @@ exports[`<NewMovie /> 1`] = `
         type="text"
       />
       <button
-        type="button"
+        type="submit"
       >
         Submit
       </button>

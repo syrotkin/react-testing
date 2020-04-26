@@ -6,7 +6,7 @@ export default class NewMovie extends Component {
     return (
       <div>
         <h2 data-testid="page-title">New Movie</h2>
-        <MovieForm />
+        <MovieForm submitForm={() => {}} />
       </div>
     );
   }
