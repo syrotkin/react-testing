@@ -6,9 +6,9 @@ afterEach(cleanup);
 
 const onSubmit = jest.fn();
 
-it('<MovieForm />', () => {
+test('<MovieForm />', () => {
   const {
-    queryByTestId, getByText
+    queryByTestId, getByText, getByTestId
   } = render(<MovieForm submitForm={onSubmit} />);
 
   // 'movie-form' is in MovieForm itself
@@ -16,6 +16,5 @@ it('<MovieForm />', () => {
 
   // relying on the text 'Submit' to not change
   fireEvent.click(getByText('Submit'));
-
   expect(onSubmit).toHaveBeenCalledTimes(1);
 });

@@ -14,9 +14,7 @@ export default class MovieForm extends Component {
       <div>
         <form
           data-testid="movie-form"
-          onSubmit={() => submitForm({
-            text,
-          })}
+          onSubmit={() => submitForm({ text })}
         >
           <input type="text" />
           <button type="submit">Submit</button>
