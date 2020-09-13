@@ -7,19 +7,23 @@ exports[`<NewMovie /> 1`] = `
   >
     New Movie
   </h2>
-  <div>
-    <form
-      data-testid="movie-form"
+  <form
+    data-testid="movie-form"
+  >
+    <label
+      for="text"
     >
+      Text
       <input
         type="text"
+        id="text"
       />
-      <button
-        type="submit"
-      >
-        Submit
-      </button>
-    </form>
-  </div>
+    </label>
+    <button
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
 </div>
 `;
