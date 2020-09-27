@@ -6,7 +6,8 @@ module.exports = {
   },
   "settings": {
         "ecmascript": 6,
-        "jsx": true
+        "jsx": true,
+        "jest/globals": true,
   },
   "parserOptions": {
       "ecmaVersion": 2017,
@@ -19,6 +20,7 @@ module.exports = {
   },
   "plugins": [
       "react",
+      "jest"
   ],
   "extends": "airbnb",
   "rules": {
