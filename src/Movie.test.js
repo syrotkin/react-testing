@@ -29,7 +29,9 @@ test('<Movie/> with movie', () => {
   );
   expect(console.error).not.toHaveBeenCalled();
   // getAttribute gets the relative href
+  // console.log('ATTRIBUTES');
+  // console.log(getByTestId('movie-link').attributes);
   expect(getByTestId('movie-link').getAttribute('href')).toBe(`/${movie.id}`);
   expect(getByTestId('movie-img').src).toBe(POSTER_PATH + movie.poster_path);
-  debug();
+  // debug();
 });
