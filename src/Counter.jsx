@@ -10,7 +10,6 @@ export default class Counter extends Component {
 
   // can use a const and don't need a constructor
   incrementCounter = () => {
-    console.log('increment counter called');
     this.setState(prevState => ({
       count: prevState.count + 1,
     }));
