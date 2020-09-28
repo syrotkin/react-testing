@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup, waitForElement, getByTestId, queryByTestId } from 'react-testing-library';
-import MoviesList from './MoviesList';
+import MoviesList from '../MoviesList';
 import { MemoryRouter } from 'react-router-dom';
 
 
@@ -14,14 +14,18 @@ afterEach(() => {
 console.error = jest.fn();
 
 const movies = {
-    results: [{
-      id: '0',
-      poster_path: '/movie-0',
-      title: 'movie 0'
-    }]
+  success: true,
+  results: [
+    {
+      id: "0",
+      poster_path: "/movie-0",
+      title: "movie 0",
+    },
+  ],
 };
 
 const movies1 = {
+  success: true,
   results: [{
     id: '0',
     poster_path: '/movie-0',
@@ -76,6 +80,20 @@ describe('<MoviesList/>', () => {
 
     const movieLinks = getAllByTestId('movie-link');
     expect(movieLinks.length).toBe(movies1.results.length);
+  });
+
+  test('should work when API call fails', async () => {
+    movies1.success = false;
+
+    fetch.mockResponseOnce(JSON.stringify(movies1));
+
+    const { debug, getByTestId, queryByTestId, getAllByTestId } = render(
+      <MemoryRouter>
+        <MoviesList />
+      </MemoryRouter>
+    );
+
+    expect(getByTestId('loading')).toBeTruthy();
   });
 });
 

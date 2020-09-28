@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, cleanup, waitForElement, getByTestId } from 'react-testing-library';
-import MovieDetail, { BACKDROP_PATH, POSTER_PATH } from './MovieDetail';
+import MovieDetail, { BACKDROP_PATH, POSTER_PATH } from '../MovieDetail';
 
 
 
